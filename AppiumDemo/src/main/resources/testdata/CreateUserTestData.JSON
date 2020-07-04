@@ -1,0 +1,33 @@
+{
+	"TC001":[
+				{
+					"userid":"testuserAutomation_12",
+					"firstname":"TestUserfirstName",
+					"lastname":"TestUserlastName",
+					"gender":"male",
+					"email":"test@gmail.com",
+					"cellmumber":"9898121212",
+					"address":"Bangalore",
+					"hospitalid":"testHospital",
+					"doctorid":"testdoctorAutomation",
+					"deviceid":"1234qwerty",
+					"heartrate":"90"
+				}
+	     	],
+	     		
+	"TC002":[
+				{
+					"userid":"testuserAutomation_2",
+					"firstname":"TestUserfirstName",
+					"lastname":"TestUserlastName",
+					"gender":"male",
+					"email":"test@gmail.com",
+					"cellmumber":"9898121212",
+					"address":"Bangalore",
+					"hospitalid":"testHospital",
+					"doctorid":"testdoctorAutomation",
+					"deviceid":"1234qwerty",
+					"heartrate":"90"
+				}
+	     	]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="TestGooglePixel(failed)" parallel="tests">
+    <classes>
+      <class name="framework.SearchTest">
+        <methods>
+          <include name="TearDown"/>
+          <include name="searchUserByNameByExcel"/>
+          <include name="TestSetUp"/>
+        </methods>
+      </class> <!-- framework.SearchTest -->
+    </classes>
+  </test> <!-- TestGooglePixel(failed) -->
+</suite> <!-- Failed suite [Suite] -->

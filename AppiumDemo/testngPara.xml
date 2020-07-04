@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "tests">
+  <test thread-count="5" name="TestGooglePixel">
+     <parameter name="deviceId" value ="emulator-5554"></parameter>
+    <parameter name="version" value ="7.1.2"></parameter>
+     <parameter name="deviceName" value ="Google-Pixel 2XL"></parameter>
+     <classes>
+      <class name="framework.SearchTest"/>
+    </classes>
+  </test> <!-- Test -->
+ <test thread-count="5" name="TestMotorola">
+     <parameter name="deviceId" value ="ZF6223T9M7"></parameter>
+     <parameter name="version" value ="10"></parameter>
+     <parameter name="deviceName" value ="Motorola One Power"></parameter>
+     <classes>
+      <class name="framework.SearchTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
