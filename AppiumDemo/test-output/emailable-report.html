@@ -9,59 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">TestGooglePixel</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">34,202</td><td></td><td></td></tr>
+<tr><td><a href="#t0">TestMotorola</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">24,912</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">TestGooglePixel</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">34,641</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">59,553</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestGooglePixel &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">framework.SearchTest</td><td><a href="#m0">TearDown</a></td><td rowspan="1">1593896426236</td><td rowspan="1">2590</td></tr><tr><th colspan="4">TestGooglePixel &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">framework.SearchTest</td><td><a href="#m1">searchUserByNameByExcel</a></td><td rowspan="1">1593896424165</td><td rowspan="1">2066</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestMotorola &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">framework.SearchTest</td><td><a href="#m0">sampleFailTestCase</a></td><td rowspan="1">1594064022099</td><td rowspan="1">31</td></tr><tr><th colspan="4">TestMotorola &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">framework.SearchTest</td><td><a href="#m1">samplePassTestCase</a></td><td rowspan="1">1594064022154</td><td rowspan="1">825</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">TestGooglePixel &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">framework.SearchTest</td><td><a href="#m2">sampleFailTestCase</a></td><td rowspan="1">1594064030255</td><td rowspan="1">6</td></tr><tr><th colspan="4">TestGooglePixel &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">framework.SearchTest</td><td><a href="#m3">samplePassTestCase</a></td><td rowspan="1">1594064030265</td><td rowspan="1">51</td></tr></tbody>
 </table>
-<h2>TestGooglePixel</h2><h3 id="m0">framework.SearchTest#TearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Connection refused: connect
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HIBACL56898&apos;, ip: &apos;10.45.91.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
-	at java.util.Optional.orElseGet(Optional.java:267)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-	at framework.BaseTest.TearDown(BaseTest.java:81)
+<h2>TestMotorola</h2><h3 id="m0">framework.SearchTest#sampleFailTestCase</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Moto One Power</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [4] but found [2]
+	at framework.SearchTest.sampleFailTestCase(SearchTest.java:37)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	... 24 more
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">framework.SearchTest#searchUserByNameByExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">framework.SearchTest#samplePassTestCase</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Moto One Power</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestGooglePixel</h2><h3 id="m2">framework.SearchTest#sampleFailTestCase</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Google Pixel 2XL</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [4] but found [2]
+	at framework.SearchTest.sampleFailTestCase(SearchTest.java:37)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">framework.SearchTest#samplePassTestCase</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Google Pixel 2XL</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

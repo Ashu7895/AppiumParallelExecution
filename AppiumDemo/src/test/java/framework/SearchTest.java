@@ -1,8 +1,6 @@
 package framework;
 
-import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
-
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
@@ -12,20 +10,35 @@ public class SearchTest extends BaseTest implements SearchUserPageRepository {
 	
 	@Parameters({"deviceName"})
 	@Test()
-	public void searchUserByNameByExcel(String deviceName) throws InterruptedException 
+	public void samplePassTestCase(String deviceName) throws InterruptedException 
 	{	
-		myTest = myExtent.createTest("Hi searchUserByNameByExcel");
-		myTest.log(Status.INFO , "Hi");
+		myTest = myExtent.createTest("samplePassTestCase");
 		myTest.assignCategory(deviceName);
 		myTest.assignAuthor("QA Automation Team");
-		System.out.println("Hi Chrome t " +i);
-		i++;
-		System.out.println("Hi am in Test Method");
-		Thread.sleep(2000);
-		assertTrue(true);
+		myTest.log(Status.INFO, "Hi am Info of a Test Cases");
+		myTest.log(Status.INFO, "Hi am Step 1 of a Test Case");
+		myTest.log(Status.INFO, "Hi am Step 2 of a Test Case");
+		myTest.log(Status.PASS, "Passing Test Case");
 		myExtent.flush();
-		
+	} 
+	
+	@Parameters({"deviceName"})
+	@Test()
+	public void sampleFailTestCase(String deviceName) throws InterruptedException 
+	{	
+		myTest = myExtent.createTest("sampleFailTestCase");
+		myTest.assignCategory(deviceName);
+		myTest.assignAuthor("QA Automation Team");
+		myTest.log(Status.INFO, "Hi am Info of a Test Cases");
+		myTest.log(Status.INFO, "Hi am Step 1 of a Test Case");
+		myTest.log(Status.INFO, "Hi am Step 2 of a Test Case");
+		myTest.log(Status.INFO, "This will get fail");
+		myTest.log(Status.FAIL, "Test Case is Failing");
+		Assert.assertEquals(2, 4);
+		myExtent.flush();
 	}
+
+	
 	
 //	//@Parameters({"deviceId","deviceName","portNumber"})
 //	@Test()
