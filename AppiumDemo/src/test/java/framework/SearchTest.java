@@ -1,11 +1,24 @@
 package framework;
 
-import org.testng.Assert;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
-public class SearchTest extends BaseTest implements SearchUserPageRepository {
+import screenshot.ScreenShot;
+
+public class SearchTest extends BaseTest implements SearchUserPageRepository , ITestListener {
 	int i = 1;
 	
 	@Parameters({"deviceName"})
@@ -19,13 +32,15 @@ public class SearchTest extends BaseTest implements SearchUserPageRepository {
 		myTest.log(Status.INFO, "Hi am Step 1 of a Test Case");
 		myTest.log(Status.INFO, "Hi am Step 2 of a Test Case");
 		myTest.log(Status.PASS, "Passing Test Case");
+		System.out.println("Test Method 1 Executed");
 		myExtent.flush();
+		
 	} 
 	
 	@Parameters({"deviceName"})
 	@Test()
-	public void sampleFailTestCase(String deviceName) throws InterruptedException 
-	{	
+	public void sampleFailTestCase(String deviceName) throws InterruptedException, IOException 
+	{	String name = "ashu";
 		myTest = myExtent.createTest("sampleFailTestCase");
 		myTest.assignCategory(deviceName);
 		myTest.assignAuthor("QA Automation Team");
@@ -34,12 +49,33 @@ public class SearchTest extends BaseTest implements SearchUserPageRepository {
 		myTest.log(Status.INFO, "Hi am Step 2 of a Test Case");
 		myTest.log(Status.INFO, "This will get fail");
 		myTest.log(Status.FAIL, "Test Case is Failing");
-		Assert.assertEquals(2, 4);
-		myExtent.flush();
+	//	myTest.fail("failed this",MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+		
+	
 	}
 
+	public String captureScreen() throws IOException {
+		TakesScreenshot screen = (TakesScreenshot) driver;
+		File src = screen.getScreenshotAs(OutputType.FILE);
+		String dest =".\\screenshots\\testscreen.png";
+		File target = new File(dest);
+		FileUtils.copyFile(src, target);
+		return dest;
+	}
 	
+	@AfterTest
+	public void afterTestExecution(ITestResult result) throws IOException
+	{
+		if(ITestResult.FAILURE == result.getStatus())
+		{
+			myTest.fail("failed this",MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+		}
+		
+	}
+}	
 	
+
+
 //	//@Parameters({"deviceId","deviceName","portNumber"})
 //	@Test()
 //	public void searchUserByNameByJSON() throws InterruptedException 
@@ -83,6 +119,3 @@ public class SearchTest extends BaseTest implements SearchUserPageRepository {
 //		test.info("User Date of Birth is : " + dateofBirth);
 //		
 //		assertEquals(userDetails.get("Username"), userid);
-	
-
-}

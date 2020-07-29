@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="5" name="TestMotorola(failed)" parallel="tests">
-    <parameter name="deviceId" value="ZF6223T9M7"/>
+  <test thread-count="5" name="Motorola(failed)" parallel="tests">
     <parameter name="version" value="10"/>
-    <parameter name="deviceName" value="Moto One Power"/>
+    <parameter name="deviceName" value="Moto"/>
+    <parameter name="deviceID" value="ZF6223T9M7"/>
+    <parameter name="portNumber" value="4724"/>
     <classes>
       <class name="framework.SearchTest">
         <methods>
-          <include name="TearDown"/>
-          <include name="sampleFailTestCase" invocation-numbers="0"/>
+          <include name="afterTestExecution"/>
+          <include name="sampleFailTestCase"/>
           <include name="TestSetUp"/>
+          <include name="samplePassTestCase"/>
+          <include name="startAppiumServer"/>
         </methods>
       </class> <!-- framework.SearchTest -->
     </classes>
-  </test> <!-- TestMotorola(failed) -->
+  </test> <!-- Motorola(failed) -->
   <test thread-count="5" name="TestGooglePixel(failed)" parallel="tests">
-    <parameter name="deviceId" value="localhost:5555"/>
     <parameter name="version" value="7.1.2"/>
     <parameter name="deviceName" value="Google Pixel 2XL"/>
+    <parameter name="deviceID" value="emulator-5554"/>
+    <parameter name="portNumber" value="4723"/>
     <classes>
       <class name="framework.SearchTest">
         <methods>
-          <include name="TearDown"/>
-          <include name="sampleFailTestCase" invocation-numbers="0"/>
+          <include name="afterTestExecution"/>
+          <include name="sampleFailTestCase"/>
           <include name="TestSetUp"/>
+          <include name="samplePassTestCase"/>
+          <include name="startAppiumServer"/>
         </methods>
       </class> <!-- framework.SearchTest -->
     </classes>

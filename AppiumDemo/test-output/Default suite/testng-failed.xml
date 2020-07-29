@@ -5,8 +5,11 @@
     <classes>
       <class name="framework.SearchTest">
         <methods>
-          <include name="searchUserByNameByExcel"/>
+          <include name="afterTestExecution"/>
+          <include name="sampleFailTestCase"/>
           <include name="TestSetUp"/>
+          <include name="samplePassTestCase"/>
+          <include name="startAppiumServer"/>
         </methods>
       </class> <!-- framework.SearchTest -->
     </classes>
