@@ -35,6 +35,7 @@ public class SearchTest extends BaseTest implements SearchUserPageRepository , I
 		System.out.println("Test Method 1 Executed");
 		myExtent.flush();
 		
+		
 	} 
 	
 	@Parameters({"deviceName"})
@@ -54,24 +55,9 @@ public class SearchTest extends BaseTest implements SearchUserPageRepository , I
 	
 	}
 
-	public String captureScreen() throws IOException {
-		TakesScreenshot screen = (TakesScreenshot) driver;
-		File src = screen.getScreenshotAs(OutputType.FILE);
-		String dest =".\\screenshots\\testscreen.png";
-		File target = new File(dest);
-		FileUtils.copyFile(src, target);
-		return dest;
-	}
 	
-	@AfterTest
-	public void afterTestExecution(ITestResult result) throws IOException
-	{
-		if(ITestResult.FAILURE == result.getStatus())
-		{
-			myTest.fail("failed this",MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
-		}
-		
-	}
+	
+	
 }	
 	
 
