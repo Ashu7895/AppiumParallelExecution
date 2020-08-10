@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestGooglePixel</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 28 10:12:09 IST 2020</td>
+<td>Started on:</td><td>Mon Aug 10 13:41:24 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (104 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39433 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,125 +75,65 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='framework.SearchTest.startAppiumServer()'><b>startAppiumServer</b><br>Test class: framework.SearchTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;portNumber&apos; is required by BeforeSuite on method startAppiumServer but has not been marked @Optional or defined
-in C:\Users\akumsrivasta\git\AppiumParallelExecution\AppiumDemo\testngPara.xml
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace242355057", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace242355057'><pre>org.testng.TestNGException: 
-Parameter &apos;portNumber&apos; is required by BeforeSuite on method startAppiumServer but has not been marked @Optional or defined
-in C:\Users\akumsrivasta\git\AppiumParallelExecution\AppiumDemo\testngPara.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:345)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>-1595911329</td>
-<td>framework.SearchTest@307f6b8c</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='framework.SearchTest.TestSetUp()'><b>TestSetUp</b><br>Test class: framework.SearchTest</td>
-<td></td>
-<td>-1595911329</td>
-<td>framework.SearchTest@307f6b8c</td></tr>
-<tr>
 <td title='framework.SearchTest.afterTestExecution()'><b>afterTestExecution</b><br>Test class: framework.SearchTest</td>
-<td></td>
-<td>-1595911329</td>
-<td>framework.SearchTest@307f6b8c</td></tr>
+<td><div><pre>org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest&gt; into a @AfterTest annotated afterTestExecution.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1666544696", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1666544696'><pre>org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest&gt; into a @AfterTest annotated afterTestExecution.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+	at org.testng.TestRunner.afterRun(TestRunner.java:853)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>-1597047123</td>
+<td>framework.SearchTest@2173f6d9</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='framework.SearchTest.sampleFailTestCase()'><b>sampleFailTestCase</b><br>Test class: framework.SearchTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;portNumber&apos; is required by BeforeSuite on method startAppiumServer but has not been marked @Optional or defined
-in C:\Users\akumsrivasta\git\AppiumParallelExecution\AppiumDemo\testngPara.xml
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1416840975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1416840975'><pre>org.testng.TestNGException: 
-Parameter &apos;portNumber&apos; is required by BeforeSuite on method startAppiumServer but has not been marked @Optional or defined
-in C:\Users\akumsrivasta\git\AppiumParallelExecution\AppiumDemo\testngPara.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:345)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>framework.SearchTest@307f6b8c</td></tr>
-<tr>
-<td title='framework.SearchTest.sampleFailTestCase()'><b>sampleFailTestCase</b><br>Test class: framework.SearchTest</td>
+<td title='framework.SearchTest.sampleFailTestCase()'><b>sampleFailTestCase</b><br>Test class: framework.SearchTest<br>Parameters: Google Pixel 2XL</td>
 <td></td>
 <td>0</td>
-<td>framework.SearchTest@704a52ec</td></tr>
+<td>framework.SearchTest@76f2b07d</td></tr>
 <tr>
-<td title='framework.SearchTest.samplePassTestCase()'><b>samplePassTestCase</b><br>Test class: framework.SearchTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;portNumber&apos; is required by BeforeSuite on method startAppiumServer but has not been marked @Optional or defined
-in C:\Users\akumsrivasta\git\AppiumParallelExecution\AppiumDemo\testngPara.xml
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace642883071", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace642883071'><pre>org.testng.TestNGException: 
-Parameter &apos;portNumber&apos; is required by BeforeSuite on method startAppiumServer but has not been marked @Optional or defined
-in C:\Users\akumsrivasta\git\AppiumParallelExecution\AppiumDemo\testngPara.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:345)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>framework.SearchTest@307f6b8c</td></tr>
+<td title='framework.SearchTest.sampleFailTestCase()'><b>sampleFailTestCase</b><br>Test class: framework.SearchTest<br>Parameters: Moto</td>
+<td></td>
+<td>1</td>
+<td>framework.SearchTest@2173f6d9</td></tr>
 <tr>
-<td title='framework.SearchTest.samplePassTestCase()'><b>samplePassTestCase</b><br>Test class: framework.SearchTest</td>
+<td title='framework.SearchTest.samplePassTestCase()'><b>samplePassTestCase</b><br>Test class: framework.SearchTest<br>Parameters: Google Pixel 2XL</td>
+<td></td>
+<td>2</td>
+<td>framework.SearchTest@76f2b07d</td></tr>
+<tr>
+<td title='framework.SearchTest.samplePassTestCase()'><b>samplePassTestCase</b><br>Test class: framework.SearchTest<br>Parameters: Moto</td>
 <td></td>
 <td>0</td>
-<td>framework.SearchTest@704a52ec</td></tr>
+<td>framework.SearchTest@2173f6d9</td></tr>
 </table><p>
 </body>
 </html>

@@ -35,19 +35,19 @@ public class BaseTest extends TestListener implements ITestListener {
 	int portNumber = 4723;
 	ITestResult result;
 
-	@BeforeSuite
-	    public void startAppiumServer() {
-			
-		System.out.println("===============  Starting Appium Server     ================");
-		String NodePath = "C:/Program Files/nodejs/node.exe";
-		String AppiumMainJSPath = "C:/Program Files/Appium/resources/app/node_modules/appium/build/lib/main.js";
-
-		service = AppiumDriverLocalService
-				.buildService(new AppiumServiceBuilder().usingDriverExecutable(new File(NodePath))
-						.withAppiumJS(new File(AppiumMainJSPath)).withIPAddress(serverIP).usingPort(portNumber));
-		service.start();
-		System.out.print("Server started at Host : " + serverIP + "and Port :" + portNumber);
-	}
+//	@BeforeSuite
+//	    public void startAppiumServer() {
+//			
+//		System.out.println("===============  Starting Appium Server     ================");
+//		String NodePath = "C:/Program Files/nodejs/node.exe";
+//		String AppiumMainJSPath = "C:/Program Files/Appium/resources/app/node_modules/appium/build/lib/main.js";
+//
+//		service = AppiumDriverLocalService
+//				.buildService(new AppiumServiceBuilder().usingDriverExecutable(new File(NodePath))
+//						.withAppiumJS(new File(AppiumMainJSPath)).withIPAddress(serverIP).usingPort(portNumber));
+//		service.start();
+//		System.out.print("Server started at Host : " + serverIP + "and Port :" + portNumber);
+//	}
 
 	@Parameters({ "deviceName", "version", "deviceID" })
 	@BeforeTest
@@ -77,26 +77,26 @@ public class BaseTest extends TestListener implements ITestListener {
 
 	}
 
-	public void stopAppiumServer() {
+//	public void stopAppiumServer() {
+//
+//		service.stop();
+//	}
 
-		service.stop();
-	}
-
-	private String getADBDeviceID() throws IOException {
-		Process pr = Runtime.getRuntime().exec("adb devices");
-		BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-		String line = null;
-		while ((line = input.readLine()) != null) {
-			if (!line.contains(" ")) {
-				String[] dev = Arrays.toString(new String[] { line }).split("\\s+");
-				String selectedDevice = dev[0].replace("[", "").replace("]", "").trim();
-				System.out.println(selectedDevice);
-				return selectedDevice;
-			}
-		}
-		return null;
-
-	}
+//	private String getADBDeviceID() throws IOException {
+//		Process pr = Runtime.getRuntime().exec("adb devices");
+//		BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+//		String line = null;
+//		while ((line = input.readLine()) != null) {
+//			if (!line.contains(" ")) {
+//				String[] dev = Arrays.toString(new String[] { line }).split("\\s+");
+//				String selectedDevice = dev[0].replace("[", "").replace("]", "").trim();
+//				System.out.println(selectedDevice);
+//				return selectedDevice;
+//			}
+//		}
+//		return null;
+//
+//	}
 
 	public void TearDown() {
 		System.out.println("After Test");

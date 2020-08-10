@@ -10,11 +10,11 @@
     </classes>
  </test> <!-- Test -->
  <test thread-count="5" name="Motorola">
-     <parameter name="version" value ="10"></parameter>
+      <parameter name="version" value ="10"></parameter>
       <parameter name="deviceName" value ="Moto"></parameter>
       <parameter name="deviceID" value ="ZF6223T9M7"></parameter>
       <classes>
       <class name="framework.SearchTest"/>
     </classes>
- </test> <!-- Test -->
+ </test><!-- Test -->
  </suite> <!-- Suite -->
